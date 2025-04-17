@@ -3,116 +3,87 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lil Nu Souk</title>
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f9f9f9;
-      color: #333;
-    }
-    header {
-      background: #f1e4f3;
-      padding: 2rem;
-      text-align: center;
-    }
-    header h1 {
-      margin: 0;
-      font-size: 2.5rem;
-    }
-    nav {
-      text-align: center;
-      margin-top: 1rem;
-    }
-    nav a {
-      margin: 0 1rem;
-      text-decoration: none;
-      color: #6a1b9a;
-      font-weight: bold;
-    }
-    .section {
-      padding: 2rem;
-      max-width: 900px;
-      margin: auto;
-    }
-    .products {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      justify-content: center;
-    }
-    .product {
-      background: white;
-      padding: 1rem;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-      width: 250px;
-      text-align: center;
-    }
-    .product img {
-      max-width: 100%;
-      border-radius: 8px;
-    }
-    .product a {
-      display: inline-block;
-      margin-top: 0.5rem;
-      padding: 0.5rem 1rem;
-      background: #6a1b9a;
-      color: white;
-      border-radius: 8px;
-      text-decoration: none;
-    }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background: #eee;
-      font-size: 0.9rem;
-    }
+    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #fff6fa; color: #333; }
+    header { background: #fbe6f4; padding: 1rem 0; text-align: center; }
+    header img { height: 60px; }
+    nav { margin-top: 1rem; }
+    nav a { margin: 0 1.5rem; color: #cc2b83; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem; text-align: center; }
+    h2 { color: #b02670; }
+    .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
+    .grid img { width: 200px; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
+    .grid img:hover { transform: scale(1.05); }
+    footer { text-align: center; background: #eee; padding: 1rem; font-size: 0.85rem; margin-top: 2rem; }
   </style>
 </head>
 <body>
   <header>
-    <h1>Lil Nu Souk</h1>
-    <p>Educational, Creative & Fun Resources for Kids and Families</p>
+    <img src="images/logo/logo.png" alt="Lil Nu Souk Logo" />
     <nav>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#discover">Discover</a>
     </nav>
   </header>
 
-  <section class="section" id="products">
-    <h2>Our Products</h2>
-    <div class="products">
-      <div class="product">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/71E2YiJmRZL._AC_UL600_SR600,400_.jpg" alt="Product 1" />
-        <h3>My First Arabic Alphabet</h3>
-        <a href="https://www.amazon.co.uk/dp/B0CZ16P9T9" target="_blank">View on Amazon</a>
-      </div>
-      <div class="product">
-        <img src="https://images-na.ssl-images-amazon.com/images/I/71ZxSxCUJ-L._AC_UL600_SR600,400_.jpg" alt="Product 2" />
-        <h3>Learn to Write Arabic</h3>
-        <a href="https://www.amazon.co.uk/dp/B0CZ17D2LZ" target="_blank">View on Amazon</a>
-      </div>
-    </div>
+  <section id="home">
+    <h2>Welcome to Lil Nu Souk</h2>
+    <p>Where Little Dreams Blossom, Culture Inspires, and Creativity Shines.</p>
+    <div class="grid" id="homeGallery"></div>
   </section>
 
-  <section class="section" id="about">
-    <h2>About Lil Nu Souk</h2>
-    <p>
-      Lil Nu Souk was born out of a love for learning and creativity. Our mission is to make educational tools fun, accessible, and joyful for children and families. From handwriting practice to cultural stories, every product is designed with care and imagination.
-    </p>
+  <section id="shop">
+    <h2>Shop Our Products</h2>
+    <p>Educational and creative tools designed with love and joy.</p>
+    <div class="grid" id="shopGallery"></div>
   </section>
 
-  <section class="section" id="contact">
-    <h2>Contact</h2>
-    <p>Have questions or ideas? Email us at <a href="mailto:hello@lilnusouk.com">hello@lilnusouk.com</a></p>
+  <section id="discover">
+    <h2>Discover</h2>
+    <p>Explore the vibrant tapestry of creativity at Lil Nu Souk's art and illustration gallery.</p>
+    <div class="grid" id="discoverGallery"></div>
   </section>
 
   <footer>
-    &copy; 2025 Lil Nu Souk. All rights reserved.
+    &copy; 2025 Lil Nu Souk. All rights reserved. | Contact: hello@lilnusouk.com
   </footer>
+
+  <script>
+    const amazonLinks = {
+      "shop1.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX1",
+      "shop2.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX2",
+      "shop3.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX3",
+      "shop4.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX4",
+      "shop5.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX5",
+      "shop6.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX6"
+    };
+
+    function loadImages(folder, containerId, useLinks = false) {
+      const container = document.getElementById(containerId);
+      for (let i = 1; i <= 100; i++) {
+        const filename = `folder${i}.jpg`;
+        const img = document.createElement("img");
+        img.src = `images/${folder}/${filename}`;
+        img.alt = filename;
+
+        if (useLinks && amazonLinks[filename]) {
+          const a = document.createElement("a");
+          a.href = amazonLinks[filename];
+          a.target = "_blank";
+          a.appendChild(img);
+          container.appendChild(a);
+        } else {
+          container.appendChild(img);
+        }
+      }
+    }
+
+    loadImages("home", "homeGallery");
+    loadImages("shop", "shopGallery", true);
+    loadImages("discover", "discoverGallery");
+  </script>
 </body>
 </html>
