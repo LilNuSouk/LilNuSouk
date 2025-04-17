@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,22 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Lil Nu Souk</title>
   <style>
-    body { font-family: 'Arial', sans-serif; margin: 0; padding: 0; background: #fff6fa; color: #333; }
-    header { background: #fbe6f4; padding: 1rem 0; text-align: center; }
-    header img { height: 60px; }
-    nav { margin-top: 1rem; }
-    nav a { margin: 0 1.5rem; color: #cc2b83; text-decoration: none; font-weight: bold; }
-    section { padding: 2rem; text-align: center; }
-    h2 { color: #b02670; }
-    .grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; margin-top: 1.5rem; }
-    .grid img { width: 200px; height: 200px; object-fit: cover; border-radius: 12px; box-shadow: 0 0 10px rgba(0,0,0,0.1); transition: transform 0.2s; }
-    .grid img:hover { transform: scale(1.05); }
-    footer { text-align: center; background: #eee; padding: 1rem; font-size: 0.85rem; margin-top: 2rem; }
+    body { font-family: Arial, sans-serif; margin: 0; background: #fff7f9; color: #333; }
+    header { background: #fce3ef; text-align: center; padding: 2rem 1rem; }
+    header img { height: 60px; margin-bottom: 1rem; }
+    nav a { margin: 0 1rem; text-decoration: none; font-weight: bold; color: #b82d6e; }
+    section { padding: 2rem; max-width: 1000px; margin: auto; }
+    h2 { color: #a8265b; }
+    .gallery, .shop-grid { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; }
+    .gallery img, .shop-grid img { width: 200px; height: 200px; object-fit: cover; border-radius: 15px; }
+    .section-title { margin-top: 3rem; font-size: 1.5rem; border-bottom: 2px solid #ddd; padding-bottom: 0.5rem; }
+    footer { background: #f1f1f1; text-align: center; padding: 2rem; margin-top: 3rem; font-size: 0.85rem; }
   </style>
 </head>
 <body>
   <header>
-    <img src="images/logo/logo.png" alt="Lil Nu Souk Logo" />
+    <img src="images/logo/logo.png" alt="Lil Nu Souk Logo">
     <nav>
       <a href="#home">Home</a>
       <a href="#shop">Shop</a>
@@ -30,60 +28,76 @@
   </header>
 
   <section id="home">
-    <h2>Welcome to Lil Nu Souk</h2>
-    <p>Where Little Dreams Blossom, Culture Inspires, and Creativity Shines.</p>
-    <div class="grid" id="homeGallery"></div>
+    <h2>Welcome to our souk! Where Little Dreams Blossom,<br>Culture Inspires, and Creativity Shines.</h2>
+    <div class="gallery" id="homeGallery"></div>
   </section>
 
   <section id="shop">
-    <h2>Shop Our Products</h2>
-    <p>Educational and creative tools designed with love and joy.</p>
-    <div class="grid" id="shopGallery"></div>
+    <h2 class="section-title">Shop</h2>
+
+    <h3>New Products</h3>
+    <div class="shop-grid" id="newProducts"></div>
+
+    <h3>Most Popular</h3>
+    <div class="shop-grid" id="popularProducts"></div>
+
+    <h3>Seasonal</h3>
+    <div class="shop-grid" id="seasonalProducts"></div>
+
+    <h4>Wall Art – COMING SOON</h4>
+    <h4>Cards – COMING SOON</h4>
+
+    <h3>A Lil Nu Souk Drawing Class - Online Kids Tuition</h3>
+    <p>Fun & Creative Online Drawing Class for Kids! ⭐️⭐️⭐️⭐️⭐️<br>
+    Let your child explore the wonderful world of art through a fun and engaging online mixed-media drawing session!
+    Perfect for young artists of all skill levels. Choose from 10 different themes and receive downloadable worksheets to keep!</p>
+    <button>Buy Now</button>
   </section>
 
   <section id="discover">
-    <h2>Discover</h2>
-    <p>Explore the vibrant tapestry of creativity at Lil Nu Souk's art and illustration gallery.</p>
-    <div class="grid" id="discoverGallery"></div>
+    <h2 class="section-title">Discover the Magic of Lil Nu Souk's Illustrations</h2>
+    <p>As an experienced illustrator, I am dedicated to delivering the highest quality artwork that exceeds your expectations. My unique style and attention to detail make my illustrations stand out from the rest. Browse through my portfolio to see my work and feel free to contact me for any project inquiries or collaborations.</p>
+
+    <div class="gallery" id="discoverGallery"></div>
+
+    <h3>About Lil Nu Souk</h3>
+    <p>Lil Nu Souk is a dream that is rooted in a passion for art and education. Every Lil Nu Souk product holds the magic of learning. From doodles to dreams, every stroke nurtures their imagination, enhances their learning, and expands their view of the world. We focus on creating a space to inspire creativity. Every design is crafted with love and wonder, from notebooks to picture books, so each child can see the beauty in their own magical journey of life and learning.</p>
   </section>
 
   <footer>
-    &copy; 2025 Lil Nu Souk. All rights reserved. | Contact: hello@lilnusouk.com
+    <p>Questions or Comments?<br>Email us or send a message — we will do our best to get back to you soon!</p>
+    <p>Opening hours: Monday to Sunday | 09:00 – 17:00</p>
+    <p>Follow us on: [Instagram Icon] [TikTok Icon]</p>
+    <p>&copy; 2025 Lil Nu Souk - All Rights Reserved. | Privacy Policy</p>
   </footer>
 
   <script>
-    const amazonLinks = {
-      "shop1.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX1",
-      "shop2.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX2",
-      "shop3.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX3",
-      "shop4.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX4",
-      "shop5.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX5",
-      "shop6.jpg": "https://www.amazon.co.uk/dp/B0XXXXXX6"
-    };
-
-    function loadImages(folder, containerId, useLinks = false) {
+    function loadGallery(folder, containerId, count=30) {
       const container = document.getElementById(containerId);
-      for (let i = 1; i <= 100; i++) {
-        const filename = `folder${i}.jpg`;
-        const img = document.createElement("img");
-        img.src = `images/${folder}/${filename}`;
-        img.alt = filename;
-
-        if (useLinks && amazonLinks[filename]) {
-          const a = document.createElement("a");
-          a.href = amazonLinks[filename];
-          a.target = "_blank";
-          a.appendChild(img);
-          container.appendChild(a);
-        } else {
-          container.appendChild(img);
-        }
+      for (let i = 1; i <= count; i++) {
+        let name = folder + i + '.jpg';
+        let img = document.createElement('img');
+        img.src = 'images/shop/' + name;
+        img.alt = name;
+        container.appendChild(img);
+      }
+    }
+    function loadSimpleGallery(folder, containerId, count=10) {
+      const container = document.getElementById(containerId);
+      for (let i = 1; i <= count; i++) {
+        let name = folder + i + '.jpg';
+        let img = document.createElement('img');
+        img.src = 'images/' + folder + '/' + name;
+        img.alt = name;
+        container.appendChild(img);
       }
     }
 
-    loadImages("home", "homeGallery");
-    loadImages("shop", "shopGallery", true);
-    loadImages("discover", "discoverGallery");
+    loadSimpleGallery('home', 'homeGallery', 10);
+    loadGallery('new', 'newProducts', 10);
+    loadGallery('popular', 'popularProducts', 10);
+    loadGallery('seasonal', 'seasonalProducts', 10);
+    loadSimpleGallery('discover', 'discoverGallery', 10);
   </script>
 </body>
 </html>
