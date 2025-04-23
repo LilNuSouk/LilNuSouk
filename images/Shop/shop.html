@@ -1,0 +1,71 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lil Nu Souk | Shop</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background: #fff7f9; color: #333; }
+  h2 { text-align: center; color: #a8265b; margin-top: 1rem; }
+  .gallery { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 2rem; }
+  .gallery img { width: 200px; height: 200px; object-fit: cover; border-radius: 12px; cursor: pointer; }
+  .modal { display: none; position: fixed; z-index: 999; padding-top: 5%; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+  .modal-content { background: white; margin: auto; padding: 1rem; width: 90%; max-width: 500px; border-radius: 10px; text-align: center; }
+  .modal-content img { max-width: 100%; height: auto; border-radius: 12px; }
+  .close { float: right; font-size: 1.5rem; cursor: pointer; }
+  footer { background: #f1f1f1; text-align: center; padding: 2rem; font-size: 0.85rem; margin-top: 3rem; }
+</style>
+</head><body>
+<header>
+  <img src="images/logo/logo.png" alt="Lil Nu Souk Logo" style="height: 60px; display: block; margin: 1rem auto;">
+  <nav style="text-align: center; margin-bottom: 2rem;">
+    <a href="index.html">Home</a> |
+    <a href="shop.html">Shop</a> |
+    <a href="discover.html">Discover</a>
+  </nav>
+</header>
+
+<h2>Shop</h2><div class="gallery" id="shopGallery"></div>
+<div class="modal" id="productModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <img id="modalImg" src="" alt="">
+    <h3 id="modalTitle"></h3>
+    <p id="modalDesc"></p>
+    <p id="modalPrice" style="font-weight:bold;"></p>
+    <a id="modalLink" href="#" target="_blank"><button>View on Amazon</button></a>
+  </div>
+</div>
+<footer>&copy; 2025 Lil Nu Souk. All rights reserved.</footer>
+
+<script>
+  const products = {
+"shop1.jpg": {title: "Tamarind Imli Notebook Lil Nu Souk", desc: "Flavours of culture and tradition! Feast your eyes on this illustrated cover by Lil Nu Souk.\nPerfect to write and draw, and use your creativity. So whether it’s journaling or writing your favourite recipes, this notebook is for you.\nFeatures:\n📖 50 Pages – A mix of lined and plain pages for writing, doodling, and brainstorming.\nUnique Hand-Illustrated Cover – A Lil Nu Souk original design, bringing pop culture charm to your stationery collection.\n🎨 Perfect for journaling, note-taking, sketching, or creative planning!\n\nDesigned with love and printed with care, this notebook is the perfect companion for school, work, or cozy moments of creativity.\n\n🛍️ Ideal for:\n✔️ Stationery lovers & collectors\n✔️ Dreamy, food aesthetic\n✔️ Thoughtful gifting for kids & creatives and food writers", price: "£5.99", link: "Tamarind Imli Notebook Lil Nu Souk : Nu Souk, Lil: Amazon.co.uk: Books"},
+"shop2.jpg": {title: "Kawaii Bunny and Kitty Home Lil Nu Souk", desc: "🐰✨ Welcome to Bunny & Kitty’s Cozy World! ✨🐱\n\nA dreamy notebook featuring an adorable kawaii bunny, her cozy home, and her playful cat friend! With 50 pages of lined and plain sections, plus cute heart details inside, it’s perfect for doodling, journaling, and storytelling. Soft pastels, sweet characters, and a sprinkle of magic—this is a must-have for little creatives and stationery lovers! 🎀✨\n\n🌸 Perfect for:\n\n✔️ Kids & Kawaii Lovers\n\n✔️ Journaling & Sketching\n\n✔️ The Cutest Gift Ever! 🎁", price: "£7.19", link: "Kawaii Bunny and Kitty Home Lil Nu Souk : Nu Souk, Lil: Amazon.co.uk: Books"},
+"shop3.jpg": {title: "Enchanting Sky Notebook", desc: "Enchanting Skies ⭐️\n\nStep into a magical realm with this cute notebook! This beautifully illustrated notebook features dreamy, cloudy skies, enchanting castle and hot air balloons floating, and twinkling stars—a perfect canvas for your thoughts, doodles, and dreams. Let your imagination soar as you capture every magical moment. Dream big!", price: "£7.19", link: "Enchanting Sky Notebook : Nu Souk, Lil: Amazon.co.uk: Books"},
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  const container = document.getElementById("shopGallery");
+  Object.keys(products).forEach(filename => {
+    const img = document.createElement("img");
+    img.src = "https://via.placeholder.com/200?text=" + encodeURIComponent(products[filename].title);
+    img.alt = filename;
+    img.onclick = () => openModal(filename);
+    container.appendChild(img);
+  });
+});
+
+function openModal(filename) {
+  const modal = document.getElementById("productModal");
+  const content = products[filename];
+  document.getElementById("modalImg").src = "https://via.placeholder.com/400?text=" + encodeURIComponent(content.title);
+  document.getElementById("modalTitle").innerText = content.title;
+  document.getElementById("modalDesc").innerText = content.desc;
+  document.getElementById("modalPrice").innerText = content.price;
+  document.getElementById("modalLink").href = content.link;
+  modal.style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("productModal").style.display = "none";
+}
+</script>
+</body></html>
