@@ -1,75 +1,76 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Discover | Lil Nu Souk</title>
+    <title>Discover - Lil Nu Souk</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header class="hero">
-        <div class="overlay">
-            <h1>Where dreams inspire art and education blooms.</h1>
-            <p>Farah Zahir</p>
+
+<header>
+    <img src="images/bubble_logo.png" alt="Lil Nu Souk Logo">
+    <div class="farah-name">Farah Zahir</div>
+    <img class="quote-logo" src="images/green_quote_logo.png" alt="Inspirational Quote">
+</header>
+
+<section class="section">
+    <h2>About Lil Nu Souk</h2>
+    <div class="circle-container">
+        <div class="circle-item">
+            <img src="images/circle1.png" alt="Experience">
+            <p><strong>EXPERIENCE IN ILLUSTRATION</strong><br>I have over 5 years of experience in illustration and have worked with a variety of clients, including book publishers, advertising agencies, and small businesses.</p>
         </div>
-    </header>
-
-    <main class="content">
-        <section>
-            <h2>About Lil Nu Souk</h2>
-        </section>
-        <section>
-            <h2>Experience in Illustration</h2>
-            <p>I have over 5 years of experience in illustration and have worked with a variety of clients, including book publishers, advertising agencies, and small businesses...</p>
-        </section>
-        <section>
-            <h2>Unique Style</h2>
-            <p>My illustrations are known for their unique style, which combines traditional techniques with modern design...</p>
-        </section>
-        <section>
-            <h2>Collaborative Approach</h2>
-            <p>I believe that collaboration is key to creating successful illustrations...</p>
-        </section>
-        <section>
-            <h2>Passion for Art</h2>
-            <p>Art and illustration have been my passions since I was young...</p>
-        </section>
-        <section>
-            <h2>Meet Lil Nu Souk</h2>
-        </section>
-        <section>
-            <h2>Background in Art</h2>
-            <p>I have a Bachelor's degree in Fine Arts, with a concentration in Illustration, from XYZ University...</p>
-        </section>
-        <section>
-            <h2>Specialization in Children's Illustration</h2>
-            <p>My passion lies in creating illustrations for children's books and media...</p>
-        </section>
-        <section>
-            <h2>Discover the Magic of Lil Nu Souk's Illustrations</h2>
-            <p>As an experienced illustrator, I am dedicated to delivering the highest quality artwork...</p>
-        </section>
-    </main>
-
-    <button id="contactBtn">Contact Us</button>
-    <div id="contactForm" class="modal">
-        <form class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Contact Us</h2>
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Your Email" required>
-            <textarea placeholder="Your Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+        <div class="circle-item">
+            <img src="images/circle2.png" alt="Style">
+            <p><strong>UNIQUE STYLE</strong><br>My illustrations are known for their unique style, which combines traditional techniques with modern design. I strive to create illustrations that stand out and capture the attention of viewers.</p>
+        </div>
+        <div class="circle-item">
+            <img src="images/circle3.png" alt="Collaboration">
+            <p><strong>COLLABORATIVE APPROACH</strong><br>I believe that collaboration is key to creating successful illustrations. I work closely with my clients to understand their vision and goals, and to ensure that the final product meets their needs. I value communication and feedback throughout the process.</p>
+        </div>
+        <div class="circle-item">
+            <img src="images/circle4.png" alt="Passion">
+            <p><strong>PASSION FOR ART</strong><br>Art and illustration have been my passions since I was young. I am constantly inspired by the world around me and strive to bring that inspiration into my work. I am dedicated to creating illustrations that not only look beautiful, but also tell a story.</p>
+        </div>
     </div>
+</section>
 
-    <script>
-        const modal = document.getElementById("contactForm");
-        const btn = document.getElementById("contactBtn");
-        const span = document.getElementsByClassName("close")[0];
+<div class="text-block">
+    <h3>Background in Art</h3>
+    <p>I have a Bachelor's degree in Fine Arts, with a concentration in Illustration, from XYZ University. During my time at university, I honed my skills in a variety of mediums, including watercolor, ink, and digital illustration.</p>
 
-        btn.onclick = () => modal.style.display = "block";
-        span.onclick = () => modal.style.display = "none";
-        window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; };
-    </script>
+    <h3>Specialization in Children's Illustration</h3>
+    <p>My passion lies in creating illustrations for children's books and media. I love bringing stories to life through my art, and strive to create illustrations that are both engaging and educational.</p>
+
+    <h3>Discover the Magic of Lil Nu Souk's Illustrations</h3>
+    <p>As an experienced illustrator, I am dedicated to delivering the highest quality artwork that exceeds your expectations. My unique style and attention to detail make my illustrations stand out from the rest. Browse through my portfolio to see my work and feel free to contact me for any project inquiries or collaborations.</p>
+</div>
+
+<section class="download-soon">
+    Free Download Coming Soon!
+</section>
+
+<button id="contactBtn">Contact Us</button>
+<div id="contactForm" class="modal">
+    <form class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Contact Us</h2>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <textarea placeholder="Your Message" required></textarea>
+        <button type="submit">Send</button>
+    </form>
+</div>
+
+<script>
+const modal = document.getElementById("contactForm");
+const btn = document.getElementById("contactBtn");
+const span = document.getElementsByClassName("close")[0];
+btn.onclick = () => modal.style.display = "block";
+span.onclick = () => modal.style.display = "none";
+window.onclick = (event) => { if (event.target == modal) modal.style.display = "none"; };
+</script>
+
 </body>
 </html>
