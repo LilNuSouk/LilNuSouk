@@ -1,0 +1,46 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Lil Nu Souk | Home</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 0; background: #fff7f9; color: #333; }
+  h2 { text-align: center; color: #a8265b; margin-top: 1rem; }
+  .gallery { display: flex; flex-wrap: wrap; gap: 1rem; justify-content: center; padding: 2rem; }
+  .gallery img { width: 200px; height: 200px; object-fit: cover; border-radius: 12px; cursor: pointer; }
+  .modal { display: none; position: fixed; z-index: 999; padding-top: 5%; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.8); }
+  .modal-content { background: white; margin: auto; padding: 1rem; width: 90%; max-width: 500px; border-radius: 10px; text-align: center; }
+  .modal-content img { max-width: 100%; height: auto; border-radius: 12px; }
+  .close { float: right; font-size: 1.5rem; cursor: pointer; }
+  footer { background: #f1f1f1; text-align: center; padding: 2rem; font-size: 0.85rem; margin-top: 3rem; }
+</style>
+</head><body>
+<header>
+  <img src="images/logo/logo.png" alt="Lil Nu Souk Logo" style="height: 60px; display: block; margin: 1rem auto;">
+  <nav style="text-align: center; margin-bottom: 2rem;">
+    <a href="index.html">Home</a> |
+    <a href="shop.html">Shop</a> |
+    <a href="discover.html">Discover</a>
+  </nav>
+</header>
+
+<h2>Welcome to Lil Nu Souk</h2>
+<p style="text-align:center;">Where Little Dreams Blossom, Culture Inspires, and Creativity Shines.</p>
+<div class="gallery" id="homeGallery"></div>
+<footer>&copy; 2025 Lil Nu Souk. All rights reserved.</footer>
+
+<script>
+  function loadImages(folder, containerId) {
+    fetch(folder).then(res => res.text()).then(text => {
+      const files = [...text.matchAll(/href="([^?][^"]+)"/g)].map(m => m[1])
+        .filter(f => f.match(/\.(jpg|jpeg|png|gif)$/i));
+      const container = document.getElementById(containerId);
+      files.forEach(file => {
+        const img = document.createElement("img");
+        img.src = folder + "/" + file;
+        img.alt = file;
+        container.appendChild(img);
+      });
+    });
+  }
+</script>
+<script>loadImages('images/home', 'homeGallery');</script>
+</body></html>
